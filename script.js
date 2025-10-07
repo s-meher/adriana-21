@@ -1,21 +1,61 @@
 // -------- CONFIG --------
 const BIG_NAME = "Adriana";
 const FROM_NAME = "Shree";
-const TARGET_ISO = "2025-10-31T19:00:00-05:00"; // change to your exact party time
-// Photos and notes - add your real URLs and names
+const TARGET_ISO = "2025-10-06T00:00:00-05:00"; // midnight on Oct 7 Chicago time
+
+// Photos - local assets
 const PHOTOS = [
-  "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?q=80&w=1200&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?q=80&w=1200&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1514516430034-c0f44a0c6ed4?q=80&w=1200&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=1200&auto=format&fit=crop"
+  "assets/IMG_0390.jpg",
+  "assets/IMG_0391.jpg",
+  "assets/IMG_0392.jpg",
+  "assets/IMG_0394.jpg",
+  "assets/IMG_0395.jpg",
+  "assets/IMG_0396.jpg",
+  "assets/IMG_0397.jpg",
+  "assets/IMG_0398.jpg",
+  "assets/IMG_0399.jpg",
+  "assets/IMG_0400.jpg",
+  "assets/IMG_0401.jpg",
+  "assets/IMG_0402.jpg",
+  "assets/IMG_0403.jpg",
+  "assets/IMG_0404.jpg",
+  "assets/IMG_0405.jpg",
+  "assets/IMG_0406.jpg",
+  "assets/IMG_0407.jpg",
+  "assets/IMG_0408.jpg",
+  "assets/IMG_0409.jpg",
+  "assets/IMG_0410.jpg",
+  "assets/IMG_0411.jpg",
+  "assets/IMG_0412.jpg",
+  "assets/IMG_0413.PNG",
+  "assets/IMG_0414.jpg",
+  "assets/IMG_0415.jpg",
+  "assets/IMG_0416.jpg",
+  "assets/IMG_0417.jpg",
+  "assets/IMG_0418.jpg",
+  "assets/IMG_0419.jpg",
+  "assets/IMG_0420.jpg",
+  "assets/IMG_0421.jpg",
+  "assets/IMG_0422.jpg",
+  "assets/IMG_0423.jpg",
+  "assets/IMG_0424.jpg",
+  "assets/IMG_0425.jpg",
+  "assets/IMG_0426.jpg",
+  "assets/IMG_0427.jpg",
+  "assets/IMG_0428.jpg",
+  "assets/IMG_0429.jpg",
+  "assets/IMG_0430.jpg",
+  "assets/IMG_0431.jpg",
+  "assets/IMG_0432.jpg",
+  "assets/IMG_0433.jpg",
+  "assets/IMG_0434.jpg"
 ];
+
 const NOTES = [
-  { who: "Sarah", msg: "Adriana, you are the funniest person I know. Can’t wait to celebrate your 21st!" },
-  { who: "Emma", msg: "Happy birthday to the kindest soul. You light up every room you enter!" },
-  { who: "Olivia", msg: "21 and finally legal. Let’s make this Halloween unforgettable. Love you!" },
-  { who: "Mia", msg: "You are a gem. Here is to the best year yet!" }
+  { who: "Didi", msg: "Happy Birthday my dearest little! I hope 21 treats you so well! I love you so much, you are such a gem in this world and I’m so happy to not have only met you but also be blessed by your presence every day. I love you so much and I hope you have an amazing birthday and all your wishes come true!! Love your big, Didi <3" },
+  { who: "Mia F", msg: "Happy birthday Adriana!! You always make my day a little better whenever I see you and have the best sense of humor :) I hope you have the best 21st and get to live it up this weekend! :heartpulse: - Mia" },
+  { who: "Becca", msg: "happy birthday, Adriana! i love you so much and i'm so happy we've gotten to be best friends. you're like an actual sister to me and i couldn't be more grateful for you. i'll always be here for you no matter what the future has in store for us, i'll always be your sister <3 i love you! 21 is your year, have a drink or two for me 😽" },
+  { who: "Shree", msg: "Happy birthday Adriana!! Happy 21! I hope you have the best day ever and an even better year ahead! I love you so much! I am so grateful to have you in my life as a friend and as the best big i could have hoped for. You may have not been the reason i joined ASA but you are the reason I stayed and now call it home <3. I can't wait to see you grow to become the amazingly amazing, smart, kind and intelligent woman I know you are. Again, happy birthday and i love you xoxo" }
 ];
 
 // -------- DOM HELPERS --------
@@ -29,7 +69,10 @@ const byId = id => document.getElementById(id);
     const fig = document.createElement("figure");
     fig.className = "figure" + (i % 6 === 0 ? " featured" : "");
     const img = document.createElement("img");
-    img.src = src; img.alt = "Memory " + (i+1);
+    img.loading = "lazy";
+    img.decoding = "async";
+    img.src = src; 
+    img.alt = "Memory " + (i+1);
     const label = document.createElement("div");
     label.className = "label";
     label.textContent = `Memory ${i+1}`;
