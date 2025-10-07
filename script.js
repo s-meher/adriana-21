@@ -1,7 +1,7 @@
 // -------- CONFIG --------
 const BIG_NAME = "Adriana";
 const FROM_NAME = "Shree";
-const TARGET_ISO = "2025-10-07T17:15:00-05:00";
+const TARGET_ISO = "2025-10-07T17:30:00-05:00";
 
 // Photos - local assets
 const PHOTOS = [
