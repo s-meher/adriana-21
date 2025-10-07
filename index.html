@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Adriana’s Spooky 21st</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Countdown Gate -->
+  <div id="gate" class="gate hidden">
+    <div class="gate-inner">
+      <div class="gate-pill">🎃 Surprise for <b>Adriana</b></div>
+      <h2 class="gate-title">Unlocks on her birthday</h2>
+      <p class="gate-sub">When the clock hits zero the magic begins</p>
+
+      <div class="countdown">
+        <div class="cd-box"><div id="d">00</div><span>Days</span></div>
+        <div class="cd-box"><div id="h">00</div><span>Hours</span></div>
+        <div class="cd-box"><div id="m">00</div><span>Minutes</span></div>
+        <div class="cd-box"><div id="s">00</div><span>Seconds</span></div>
+      </div>
+
+      <button id="preConfetti" class="btn">Pre-celebrate 🥳</button>
+    </div>
+    <div id="confetti"></div>
+    <div class="bats bats-left">🦇</div>
+    <div class="bats bats-right">🦇</div>
+  </div>
+
+  <!-- Page Content -->
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="cake">🎂</div>
+      <h1 class="headline"><span>HAPPY 21ST</span></h1>
+      <h2 class="name">ADRIANA! <span class="pumpkin">🎃</span></h2>
+      <p class="tag">The goofy, funny, kind queen turns 21! 👻✨</p>
+      <div class="emoji-row">🕷️🦇🧙‍♀️👻🎃🍹</div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Memory Graveyard -->
+    <section id="gallery" class="section dark">
+      <h3 class="section-title">✨ Memory Graveyard ✨</h3>
+      <p class="section-sub">📸 Moments worth haunting forever 📸</p>
+      <div class="grid gallery-grid" id="galleryGrid">
+        <!-- JS will populate from PHOTOS array. You can also hardcode <figure> items if you prefer -->
+      </div>
+    </section>
+
+    <!-- Sister Spells -->
+    <section id="notes" class="section purple">
+      <h3 class="section-title">👻 Sister Spells 👻</h3>
+      <p class="section-sub">💜 Words from your coven 💜</p>
+      <div class="notes" id="notesList">
+        <!-- JS will populate from NOTES array -->
+      </div>
+    </section>
+
+    <!-- Spooky Gazette -->
+    <section id="gazette" class="section parchment">
+      <h3 class="gazette-title">🎃 THE SPOOKY GAZETTE</h3>
+      <div class="edition">SPECIAL EDITION — OCTOBER</div>
+      <div class="gazette-grid">
+        <article class="card pumpkin">
+          <h4>🍹 POTION BAR ALERT</h4>
+          <p>Half-off enchanted cocktails for Adriana’s 21st. Every drink comes with a side of mischief. Bring your crown.</p>
+        </article>
+        <article class="card lilac">
+          <h4>👻 GHOST SIGHTING</h4>
+          <p>Local sorority reports a birthday queen having the time of her life. Witnesses say she is unforgettable.</p>
+        </article>
+        <article class="card mint">
+          <h4>🎃 PUMPKIN PATCH PARTY</h4>
+          <p>Exclusive invite to Adriana’s haunted bash. BYOB — Bring Your Own Broomstick. Costume required.</p>
+        </article>
+        <article class="card rose">
+          <h4>🔮 FORTUNE REVEALED</h4>
+          <p>Crystal ball predicts a year of adventure, laughter, and legendary memories with your favorite people.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Mystic Fortune -->
+    <section id="fortune" class="section fortune">
+      <h3 class="section-title">🔮 Your Mystic Fortune</h3>
+      <div class="fortune-box">
+        <div class="fortune-top">🃏</div>
+        <h4>The Year Ahead</h4>
+        <p>
+          The cards reveal transformation, adventure, and pure magic. Expect late night adventures, spontaneous road trips, and friendships that glow brighter than jack-o-lanterns. Trust your intuition and embrace the chaos.
+        </p>
+        <p class="lucky"><b>Lucky Numbers:</b> 21, 10, 7 • <b>Lucky Color:</b> Pumpkin Orange 🎃</p>
+      </div>
+    </section>
+
+    <!-- Playlist -->
+    <section id="playlist" class="section teal">
+      <h3 class="section-title">🎵 Spooky Party Playlist 🎵</h3>
+      <p class="section-sub">Haunting beats for your special night</p>
+      <div class="embed">
+        <!-- Replace the src with your Spotify embed link -->
+        <iframe
+          title="Spotify"
+          src="https://open.spotify.com/embed/playlist/37i9dQZF1DX3ND264N08pv"
+          width="100%" height="380" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+        </iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    Built with ❤️ by Shree for Adriana
+    <div class="tiny">Happy 21st Birthday! 🎃👻✨</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
